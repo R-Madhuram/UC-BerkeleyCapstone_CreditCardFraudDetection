@@ -1,5 +1,5 @@
 # UC-BerkeleyCapstone_CreditCardFraudDetection
-ABSTRACT
+## ABSTRACT
 
 The number of digital transactions in financial sector is rapidly growing especially after the Covid-19 imposed restriction, which caused an upsurge in online shopping. Financial institutions hence have to come up with novel and efficient approaches to detect fraudulent transactions to ensure monetary safety and reliability for the customer and to prevent losses occurring to the institution itself due to such unscrupulous transactions. 
 
