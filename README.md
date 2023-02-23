@@ -11,7 +11,7 @@ Hence we propose to utilize
 1. boosting methods to improve the sophistication of the model to be able to distinguish the classes more accurately which in turn can boos the precision score and ROC-AUC score. The boosting methods, AdaBoost, CatBoost, XGBosst and LightGBM (HistClassifier in SK learn) are some attractive options that would be explored in the next phase of this project. Also stacking these ensemble methods might improve their individual scores. 
 2. Deep learning methods like LSTM-GRU RNN and Graph models that could also be employed to detect the fraudulent transactions of this dataset and compared with ML models. 
 
-ROADMAP (guide to navigate through project and notebooks):
+## ROADMAP (guide to navigate through project and notebooks):
 
 •	This project is split into multiple notebooks that have been numbered (along with titles) in accordance with the order of study, operation, and execution. Within each notebook the headings and subheading sections (when opened in collab appears in the side bar) provide the birds-eye view of the contents. 
 
