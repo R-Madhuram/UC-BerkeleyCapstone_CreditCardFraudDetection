@@ -1,5 +1,5 @@
 # Credit Card Fraud Detection
-[Dataset](https://www.kaggle.com/competitions/ieee-fraud-detection/data)
+[![Dataset](https://img.shields.io/badge/Dataset-Kaggle-blue)](https://www.kaggle.com/competitions/ieee-fraud-detection/data) [![Language](https://img.shields.io/badge/Lang-Python-brightgreen)](https://www.python.org/) [![ML Library](https://img.shields.io/badge/ML-Scikit--learn-yellowgreen)](https://scikit-learn.org/) [![AutoML Library](https://images.app.goo.gl/54ZNxJE7TVpaRYgZ9)](https://pycaret.gitbook.io/docs/)
 
 ## Project Description:
 
