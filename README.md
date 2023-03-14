@@ -1,5 +1,5 @@
 # Credit Card Fraud Detection
-[![Dataset](https://img.shields.io/badge/Dataset-Kaggle-blue)](https://www.kaggle.com/competitions/ieee-fraud-detection/data) [![Language](https://img.shields.io/badge/Lang-Python-brightgreen)](https://www.python.org/) [![ML Library](https://img.shields.io/badge/ML-Scikit--learn-yellowgreen)](https://scikit-learn.org/) [![AutoML Library](https://img.shields.io/badge/AutoML-pycaret-blue)](https://pycaret.gitbook.io/docs/)
+[![Dataset](https://img.shields.io/badge/Dataset-Kaggle-blue)](https://www.kaggle.com/competitions/ieee-fraud-detection/data) [![Language](https://img.shields.io/badge/Lang-Python-brightgreen)](https://www.python.org/) [![ML Library](https://img.shields.io/badge/ML-Scikit--learn-yellowgreen)](https://scikit-learn.org/) [![AutoML Library](https://img.shields.io/badge/AutoML-pycaret-blue)](https://pycaret.gitbook.io/docs/) [![Capstone Project](https://img.shields.io/badge/CapstoneProject-UCBerkeley-yellow)](https://em-executive.berkeley.edu/professional-certificate-machine-learning-artificial-intelligence?utm_source=bing&utm_medium=c&utm_term=berkeley%20machine%20learning%20certification&utm_location=86946&utm_campaign=B-365D_US_BG_SE_BH-PCMLAI_Brand&utm_content=Berkeley_MLAI&msclkid=84b4646fc6111be42dcd007fcfb213cf)
 
 ## Project Description:
 
