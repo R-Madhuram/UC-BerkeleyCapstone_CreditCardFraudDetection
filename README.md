@@ -17,7 +17,7 @@ Using Machine learning and Artificial Intelligence we can find patterns that des
 
 **Challenges we faced:**
 
-The dataset was complex with high dimensions and observations of which many of the features were obfuscated for privacy purposes. This hindered us from using domain knowledge to perform dimensionality reduction. This also presented with us with unique challenges in tuning more complex ML algorithms as the training became computationally expensive. Also due to the inherent nature of the business question the dataset was highly imbalanced (97% vs 3% of class representation) with many non-fraud transactions compared to fraudulent transactions. This deterred the performance of classification models. 
+The dataset was complex with high dimensions and observations of which many of the features were obfuscated for privacy purposes. This hindered us from using domain knowledge to perform dimensionality reduction. This also presented with us with unique challenges in tuning more complex ML algorithms as the training became computationally expensive. Further sampling techniques like SMOTE that was essential for certain ensemble algorithm could be leading to data overfitting that needs to checked. Also,  due to the inherent nature of the business question the dataset was highly imbalanced (97% vs 3% of class representation) with many non-fraud transactions compared to fraudulent transactions. This deterred the performance of classification models. We tried to address these issues by using Auto-ML libraries. 
 
 ## Methodology:
 
@@ -61,7 +61,7 @@ We reduced the number of features systematically using correlation analysis wher
 
 Model with increasing complexity were built to predict the transactions better and a ML technique (BOOSTING methods) that combines several weak models to build a strong one presented with the highest classification score (~0.93 ROC-AUC score). Three such powerful boosting methods (cat-boost-0.89, XgBoost-0.93, lightGBM-0.92 ROC-AUC score) were stacked to build a meta model that presented with a classification score of 0.94. This meta classifier has already been stored in a cloud platform. 
 
-Future work could be helpful to combine unsupervised learning techniques like anomaly detection (for which models have been built and presented) that could be placed on top the meta classifier in cloud to improve the fraudulent transaction identification. Deep Learning techniques could also be explored to improve the overall performance of the model stack and could be combined with ML techniques to Improve the fraud detection capacity of the AI system. 
+Future work could be helpful to combine unsupervised learning techniques like anomaly detection that could be placed on top the meta classifier in cloud to improve the fraudulent transaction identification. Deep Learning techniques could also be explored to improve the overall performance of the model stack and could be combined with ML techniques to Improve the fraud detection capacity of the AI system. 
 
 **Technology Stack Used:**
 
@@ -123,7 +123,7 @@ This model was further tested by fixing the class imbalance using SMOTE sampling
 
 **Notebook 4, 5, and 6 (Baseline and Simple ML Models)**: We then built a baseline model (Notebook 4) to set the yardstick for the other sophisticated models. We started with a simple logistic regression model and increase it complexity (balance weights, grid search, Adaboost) to predict the fraudulent transactions (Notebook 5). We then proceed to another type of model Decision tree model and fine-tune to find the model performance for the prediction of fraudulent data (Notebook 6)
 
-**Notebook 7, 8, 9 and 11 (Ensemble and Stacked Classifier ML Models)**: We built ensemble models using HistGradientClassifier, CatBoosting Classifier and Xtreme gradient Boosting classifiers. We stacked these sophisticated and powerful models using various meta estimators with and without sampling techniques in respective notebooks. 
+**Notebook 7, 8, 9 and 10 (Ensemble and Stacked Classifier ML Models)**: We built ensemble models using HistGradientClassifier(7), CatBoosting Classifier (8) and Xtreme gradient Boosting classifiers(9). We stacked these sophisticated and powerful models using various meta estimators in respective notebooks (10). 
 
 **Notebook 13 and 14 (Auto-ML using PyCaret with Ensemble Techniques)**: We built ensemble models using HistGradientClassifier, CatBoosting Classifier and Xtreme gradient Boosting classifiers just like in the Notebooks 7-11, but using Auto-ML library PyCaret Provided in Python. We stacked the Auto-ML tuned ensemble models using various meta estimators with and without sampling techniques in respective notebooks. 
 
