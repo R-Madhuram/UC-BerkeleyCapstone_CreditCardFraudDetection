@@ -19,35 +19,29 @@ The dataset was complex with high dimensions and observations of which many of t
 
 ## Methodology:
 
-A. Setting the data for business objective :
+**A. Setting the data for business objective :**
 1. EDA:
 	i. Systematic reduction of features using correlation analysis
 	ii. Merging the training dataset features to make one single data ready for modeling. 
 
-B. Building the baseline and simple classification model(s):
+**B. Building the baseline and simple classification model(s):**
 1.  Baseline:
-
 	i. Since the majority class is non-fraudulent data (class label - 0), we set the predictions based on this class .
 2. Simple classification model(s):
-
 	i. Decision tree and Logistic regression was used to build basic classification model(s) as other ML models like KNN and SVM were inappropriate to 
   handle dataset of this size. 
 
-C. Ensemble Model(s):
+**C. Ensemble Model(s):**
 1.  Ensemble techniques: 
-
 	i. We used Boosting classifiers like cat boost, adaboost, extreme gradient boosting, light gradient boosting (Hist Boosting in sk-learn) and stacked them to improve their efficiency. 
 2. SMOTE sampling:
-
 	i. The ensemble and staked classification models were used along SMOTE sampling technique to improve their performance.
 
-D. AUTO-ML:
+**D. AUTO-ML:**
 1. Ensemble techniques:
-
 	i. Due to the size of the dataset and large number of tunable parameters, Pycaret library, which is a Auto-ML learning library
 	   was utilized to further tune the models built in step C. 
 2. SMOTE Sampling:
-
 	i. Auto-ML is efficient to address any imbalances present in the dataset. However, the option to fix the imbalance using SMOTE sampling was also utilized to explore the possibility of improving the ensemble model built with Auto-ML performance. 
 
 ## ROADMAP (guide to navigate through project and notebooks):
