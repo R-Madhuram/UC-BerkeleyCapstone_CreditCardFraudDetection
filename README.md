@@ -55,7 +55,7 @@ Predicting transactions that are fraudulent are of utmost importance not only to
 
 Identification of such transactions can be hugely improved using artificial intelligence as they are capable of sifting through enormous amount of data that consist of information regarding the normal and fraudulent transactions. These are based on mathematical modeling that can detect  patterns which describe and distinguish the two classes of transactions. 
 
-We were presented with a dataset that had ~500K transactions, of which 3.5% represented fraudulent transactions. Models were built with increasing level of complexity catering the needs of the dataset which were 1. Many features (250 parameters) 2. Big data (~ 500K observations) 3. Obfuscated features (real names of the features are masked for privacy). 
+We were presented with a dataset that had 500K transactions, of which 3.5% represented fraudulent transactions. Models were built with increasing level of complexity catering the needs of the dataset which were 1. Many features (250 parameters) 2. Big data (~ 500K observations) 3. Obfuscated features (real names of the features are masked for privacy). 
 
 We reduced the number of features systematically using correlation analysis wherein one feature was retained for every correlated pair of features. After reducing the dimensions we built model that would just provide the classification based on the best guess which would be to predict the majority of the two classes (hence always predict non-fraud). 
 
