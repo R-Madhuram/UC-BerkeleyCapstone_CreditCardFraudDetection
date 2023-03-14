@@ -127,6 +127,6 @@ This model was further tested by fixing the class imbalance using SMOTE sampling
 
 **Notebook 13 and 14 (Auto-ML using PyCaret with Ensemble Techniques)**: We built ensemble models using HistGradientClassifier, CatBoosting Classifier and Xtreme gradient Boosting classifiers just like in the Notebooks 7-11, but using Auto-ML library PyCaret Provided in Python. We stacked the Auto-ML tuned ensemble models using various meta estimators with and without sampling techniques in respective notebooks. 
 
-** The findings and Summary of each notebook is presented in the Summary section of the resctive notebook **
+** The findings and Summary of each notebook is presented in the Summary section of the respective notebook. Also, in Notebooks 7 through 10, some of the models results have not been presented as they were computationally expensive and might be optimal to continue further into the analysis. They have been retained in the notebook for informational purpose. **
 
 (NOTE: This project is in alignment with the submission of problem statement and methods for the capstone project in Module 17. It is to be noted that the mentioned submission (problem statement of this project) is different from the capstone project idea proposed in Module 11 submission (initial question of capstone and data). The change in capstone topic was motivated by lack of ease in fetching the dataset for the Module 11 capstone idea, which was pertaining to analysis of electric vehicles.)
