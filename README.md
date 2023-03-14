@@ -45,6 +45,12 @@ The dataset was complex with high dimensions and observations of which many of t
 2. SMOTE Sampling:
 	- Auto-ML is efficient to address any imbalances present in the dataset. However, the option to fix the imbalance using SMOTE sampling was also utilized to explore the possibility of improving the ensemble model built with Auto-ML performance. 
 
+[8251](https://user-images.githubusercontent.com/115378526/224903725-8fadbb25-81ad-49d2-ae37-ea3d35dded11.jpg)
+
+![60642](https://user-images.githubusercontent.com/115378526/224903775-908099eb-8d0d-49ff-a266-061c07104f56.jpg)
+
+
+
 ## ROADMAP (guide to navigate through project and notebooks):
 
 •	This project is split into multiple notebooks that have been numbered (along with titles) in accordance with the order of study, operation, and execution. Within each notebook the headings and subheading sections (when opened in collab appears in the side bar) provide the birds-eye view of the contents. 
