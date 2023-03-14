@@ -17,6 +17,33 @@ Using Machine learning and Artificial Intelligence we can find patterns that des
 
 The dataset was complex with high dimensions and observations of which many of the features were obfuscated for privacy purposes. This hindered us from using domain knowledge to perform dimensionality reduction. This also presented with us with unique challenges in tuning more complex ML algorithms as the training became computationally expensive. Also due to the inherent nature of the business question the dataset was highly imbalanced (97% vs 3% of class representation) with many non-fraud transactions compared to fraudulent transactions. This deterred the performance of classification models. 
 
+## Methodology:
+
+A. Setting the data for business objective :
+1. EDA:
+	i. Systematic reduction of features using correlation analysis
+	ii. Merging the training dataset features to make one single data ready for modeling. 
+
+B. Building the baseline and simple classification model(s):
+1.  Baseline:
+	i. Since the majority class is non-fraudulent data (class label - 0), we set the predictions based on this class .
+2. Simple classification model(s):
+	i. Decision tree and Logistic regression was used to build basic classification model(s) as other ML models like KNN and SVM were inappropriate to 
+  handle dataset of this size. 
+
+C. Ensemble Model(s):
+1.  Ensemble techniques: 
+	i. We used Boosting classifiers like cat boost, adaboost, extreme gradient boosting, light gradient boosting (Hist Boosting in sk-learn) and stacked them to improve their efficiency. 
+2. SMOTE sampling:
+	i. The ensemble and staked classification models were used along SMOTE sampling technique to improve their performance.
+
+D. AUTO-ML:
+1. Ensemble techniques:
+	i. Due to the size of the dataset and large number of tunable parameters, Pycaret library, which is a Auto-ML learning library
+	   was utilized to further tune the models built in step C. 
+2. SMOTE Sampling:
+	i. Auto-ML is efficient to address any imbalances present in the dataset. However, the option to fix the imbalance using SMOTE sampling was also utilized to explore the possibility of improving the ensemble model built with Auto-ML performance. 
+
 ## ROADMAP (guide to navigate through project and notebooks):
 
 •	This project is split into multiple notebooks that have been numbered (along with titles) in accordance with the order of study, operation, and execution. Within each notebook the headings and subheading sections (when opened in collab appears in the side bar) provide the birds-eye view of the contents. 
