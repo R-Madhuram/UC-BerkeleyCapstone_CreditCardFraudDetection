@@ -55,13 +55,13 @@ Predicting transactions that are fraudulent are of utmost importance not only to
 
 Identification of such transactions can be hugely improved using artificial intelligence as they are capable of sifting through enormous amount of data that consist of information regarding the normal and fraudulent transactions. These are based on mathematical modeling that can detect  patterns which describe and distinguish the two classes of transactions. 
 
-We were presented with a dataset that had 500K transactions, of which 3.5% represented fraudulent transactions. Models were built with increasing level of complexity catering the needs of the dataset which were 1. Many features (250 parameters) 2. Big data (~ 500K observations) 3. Obfuscated features (real names of the features are masked for privacy). 
+We were presented with a dataset that had ~500K transactions, of which ~3.5% represented fraudulent transactions. Models were built with increasing level of complexity catering the needs of the dataset which were 1. Many features (250 parameters) 2. Big data (~ 500K observations) 3. Obfuscated features (real names of the features are masked for privacy). 
 
-We reduced the number of features systematically using correlation analysis wherein one feature was retained for every correlated pair of features. After reducing the dimensions we built model that would just provide the classification based on the best guess which would be to predict the majority of the two classes (hence always predict non-fraud). 
+We reduced the number of features systematically using correlation analysis wherein one feature was retained for every correlated pair of features. After reducing the dimensions we built baseline model that would just provide the classification based on the best guess which would be to predict the majority of the two classes (hence always predict non-fraud). 
 
 Model with increasing complexity were built to predict the transactions better and a ML technique (BOOSTING methods) that combines several weak models to build a strong one presented with the highest classification score (~0.93 ROC-AUC score). Three such powerful boosting methods (cat-boost-0.89, XgBoost-0.93, lightGBM-0.92 ROC-AUC score) were stacked to build a meta model that presented with a classification score of 0.94. This meta classifier has already been stored in a cloud platform. 
 
-Future work could be helpful to combine unsupervised learning techniques like anomaly detection (for which models have been built and presented) that could be placed on top the meta classifier in cloud to improve the fraudulent transaction identification. 
+Future work could be helpful to combine unsupervised learning techniques like anomaly detection (for which models have been built and presented) that could be placed on top the meta classifier in cloud to improve the fraudulent transaction identification.  
 
 **Technology Stack Used:**
 
@@ -80,11 +80,11 @@ Although the stacked classifier with Random forest meta classifier and lightGBM(
 
 To address this issue we chose Auto-ML techniques using Pycaret Python library which was 1. supported by GPU for all the stacked classifier models, 2. Automatically tuned the hyper parameters 3. Performed stratified k-fold with 10 folds 4. Fixed imbalance in the dataset. 
 
-Ensemble model built using the Auto-ML tool gave superior performance when compared to models built without this tool. For instance catalos, lightGBM and XgBoost presented themselves with 0.89, 0.92 and 0.94 ROC-AUC score. This score was obtained with taking into account the inherent imbalance present in the dataset which when considered might improve the overall performance of the model(s).
+Ensemble model built using the Auto-ML tool gave superior performance when compared to models built without this tool. For instance CatBoost, lightGBM and XgBoost presented themselves with 0.89, 0.92 and 0.94 ROC-AUC score. This score was obtained with taking into account the inherent imbalance present in the dataset which when considered might improve the overall performance of the model(s).
 
-These three ensemble model were then stacked along with various other models (decision tree, adaboost, light GBM and random forest) to improve their individual performance. We found that random forest and light GBM performed equally well with a ROC-AUC score of 0.94. However the stacked model with lightGBM meta model had a 10% higher recall score than the stacked models used with random forest meta classifier which led us us to choose this as the final model . 
+These three ensemble model were then stacked along with various other models (decision tree, adaboost, light GBM and random forest) to improve their individual performance. We found that Adaboost and light GBM performed equally well with a ROC-AUC score of 0.94 and a recall score of 0.53. Hence we chose LightGBM (or AdaBoost) as the final model to be stored in the Azure cloud platform . 
 
-This model was further tested by fixing the class imbalance using SMOTE sampling technique provided but the Pycaret library.
+This model was further tested by fixing the class imbalance using SMOTE sampling technique provided but the Pycaret library. We found that it decreased the ROC-AUC score to ~0.87. This could be attributed to the fact that SMOTE sampling might actually be making the model learn the synthetic data patterns leading to poor performance on the actual dataset. 
 
 ## ROADMAP (guide to navigate through project and notebooks):
 
