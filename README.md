@@ -88,13 +88,34 @@ This model was further tested by fixing the class imbalance using SMOTE sampling
 
 ## ROADMAP (guide to navigate through project and notebooks):
 
-•	This project is split into multiple notebooks that have been numbered (along with titles) in accordance with the order of study, operation, and execution. Within each notebook the headings and subheading sections (when opened in collab appears in the side bar) provide the birds-eye view of the contents. 
-
-•	Each heading/subheading of the first two notebook is followed by summary section that compiles the major findings of that section. The charts and visualizations that were utilised to just get a high level view of the data requires bigger/screen or zooming. All other visualizations have proper scaling of axis. 
-
-•	Each notebook pertaining to the model offers a summary section at the end that compiles the results of the various models of that notebook and discusses the finding, points of roadblocks and future directions along with subheading of different version of the models and evaluation of the different versions. 
-
-•	The notebooks are also supported by two separate python files that contain many helper functions to make repetitive taks like model evaluation easier. 
+* data:
+	* ieee-fraud-detection.zip
+* helperfunctions:
+	* helper_functions.py (file operations helper function)
+	* helper_functions_ml.py (helper functions for analysis & model evaluation)
+* notebooks:
+	* 1_eda:
+		* 1_Dataloading_and_train_transaction_EDA.ipynb (load the transaction data and EDA on it).
+		* 2_train_identity_EDA.ipynb (EDA on the training identity data)
+		* 3_Feature_Engineering.ipynb (feature engineering on the transaction and identity data)
+	* 2_simpleclassificationmodels:
+		* 4_Baseline_model.ipynb (split data in to K folds and baseline model analysis)
+		* 5_Logistic_Regression.ipynb (train and comparisons between different logistic regression models)
+		* 6_Decision_Trees.ipynb (train and comparisons between different decision trees)
+	* 3_ensemble_methods:
+		* 7_Ensemble_methods.ipynb (Hist Gradient Classifier - original data and sampled data)
+		* 8_CatBoost.ipynb (CAT Boosting Classifier - original data and sampled data)
+		* 9_XGBoost.ipynb (Extreme Gradient Boosting Classifier - original data and sampled data)
+	* 4_AutoML_ensembleModels:
+		* 13_Auto_ML_Model.ipynb (Auto ML models - ensemble and stacked)
+		* 14_Auto_ML_Model.ipynb (Auto ML models - ensemble and stacked on stacked data)
+* Classification_Products:
+	* columns_to_retain.csv - features to retain from training transaction data
+	* columns_to_retain_identity.csv - features to retain from training identity data
+	* df.csv - feature engineered data
+	* train_dev_indices.pickle - training and dev row indices for each fold in the 3 fold cross validation
+	* model_metrics_hyperparamtune.csv - logistic regression model metrics after hyper parameter tuning
+	* model_metrics_nohyperparamtune.csv - logistic regression model metrics after no hyper parameter tuning
 
 **Notebook 1 and 2 (Data loading and EDA)**: We loaded the datasets (transaction and identity dataset). Built box and bar charts for the numerical and categorical variables (NOTE: since we conduct this analysis to get a high level view of the dataset, the axis might not be on scale and would require zooming in). The respective notebook flows to get deeper into various grouped features, categorizes them on basis of their null structures and reduces features based on correlation. The reduced features are then joined and saved in the respective notebook. The results of each set of analysis is summarized at the end of each sub-heading. 
 
