@@ -1,16 +1,21 @@
-# UC-BerkeleyCapstone_CreditCardFraudDetection
-## ABSTRACT
+# Credit Card Fraud Detection
+## Project Description:
 
-The number of digital transactions in financial sector is rapidly growing especially after the Covid-19 imposed restriction, which caused an upsurge in online shopping. Financial institutions hence have to come up with novel and efficient approaches to detect fraudulent transactions to ensure monetary safety and reliability for the customer and to prevent losses occurring to the institution itself due to such unscrupulous transactions. 
+**Motivation:**
 
-In this study we explore and propose various data mining (DM) and Machine Learning/Artificial Intelligence (ML/AI) approaches to detect such fraudulent transactions by distinguishing them from the regular digital withdrawals/payments. We analyzed a huge dataset with approximately 500K observations and ~435 features. The features were split into two different datasets counting the transactions and identity information exclusively. A stepwise approach of Exploratory data analysis (EDA) and feature engineering was employed that allowed to select a reduced set of 157 features. We compared two ML models namely Logistic regression and Decision tree along with boosting methods for their success in identifying fraudulent transactions successfully. The models were evaluated based on their area under the receiver operating characteristic curve (ROC-AUC) and recall values. Due to the inherent presence of class imbalance (about 96% of data is normal transaction), we compared the accuracy metric of the models with a baseline model to improve the reliability of the model we built. The models we built we tested on three evaluation sets using the stratified k-fold  method. 
+The number of digital transactions in financial sector is rapidly growing especially after the Covid-19 imposed restriction, which caused an upsurge in online shopping. Financial institutions hence have to come up with novel and efficient approaches to detect fraudulent transactions to ensure monetary safety and reliability for the customer and to prevent losses occurring to the institution itself due to such unscrupulous transactions.
 
-Based on the initial model building exercise we found that Logistic regression with balanced has been able to present the highest ROC-AUC score of ~0.84. It performs better than the base model in producing high recall score of ~0.75. However the precision of this model is poor (0.10) leading to the decrease in accuracy. 
+**Business Objective:**
 
-Hence we propose to utilize 
-1. boosting methods to improve the sophistication of the model to be able to distinguish the classes more accurately which in turn can boos the precision score and ROC-AUC score. The boosting methods, AdaBoost, CatBoost, XGBosst and LightGBM (HistClassifier in SK learn) are some attractive options that would be explored in the next phase of this project. Also stacking these ensemble methods might improve their individual scores. 
-2. Deep learning methods like tabnet and Graph models that could also be employed to detect the fraudulent transactions of this dataset and compared with ML models. 
+Building architectures and processes to help find the fraudulent transaction(s) and to distinguish them from regular transactions is of immense value to Businesses. This can be achieved through new technologies like Artificial Intelligence to address the growing digital presence of monetary transactions. 
 
+**How AI and Machine Learning can Help?**
+
+Using Machine learning and Artificial Intelligence we can find patterns that describe and distinguish the fraudulent and non-fraudulent transactions based on the various details associated with each transaction. This could be achieved using both labeled (data that has been fraudulent or non-fraudulent) or unlabeled data as ML techniques are capable of reading patterns that human eye can miss. In this project we selected a dataset provided by IEEE in Kaggle that contains labeled data and built classification models using this data. We propose to further improve this model by augmenting it with unsupervised techniques (anomaly detection). 
+
+**Challenges we faced:**
+
+The dataset was complex with high dimensions and observations of which many of the features were obfuscated for privacy purposes. This hindered us from using domain knowledge to perform dimensionality reduction. This also presented with us with unique challenges in tuning more complex ML algorithms as the training became computationally expensive. Also due to the inherent nature of the business question the dataset was highly imbalanced (97% vs 3% of class representation) with many non-fraud transactions compared to fraudulent transactions. This deterred the performance of classification models. 
 
 ## ROADMAP (guide to navigate through project and notebooks):
 
